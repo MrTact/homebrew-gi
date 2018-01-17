@@ -6,13 +6,14 @@ class Gi < Formula
   desc "Alternate command line client for git"
   homepage "https://gitlab.com/mrtact/gi"
   url "https://s3-us-west-2.amazonaws.com/org.tkeating.gi/gi-#{VERSION}.tar.gz"
-  sha256 "5e9b598c31502c917bedb3c5f3446f8ef491cdb3945dc10e2d425297224a630b"
+  sha256 "fd420bc88f81057660672095479d9fa55bf195c62860724b69ba92d5bf343ab2"
 
   bottle :unneeded
 
   def install
-	libexec.install Dir["*"]
-	bin.install_symlink libexec/"bin/gi"
-	# man1.install libexec/"share/man/man1/srcclr.1"
+    inreplace "bin/gi", "GI_LIBEXEC", "#{libexec}" 
+  	libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/gi" => "gi"
+  	# man1.install libexec/"share/man/man1/srcclr.1"
   end
 end
