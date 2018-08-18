@@ -6,7 +6,7 @@ class Gi < Formula
   desc "Alternate command line client for git"
   homepage "https://gitlab.com/mrtact/gi"
   url "https://s3-us-west-2.amazonaws.com/org.tkeating.gi/gi-#{VERSION}.tar.gz"
-  sha256 "94ae19511047cf25715068c338e9f12803975afb3355623ea385ca074f6ce73e"
+  sha256 "96cfd6c465505e9e0004eee969bbff59045c8d6d027a3924e7fe50167788d41c"
 
   bottle :unneeded
 
